@@ -4,14 +4,14 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --webpack",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build --webpack",
+    "start": "node init && next start",
     "lint": "eslint",
     "test": "node ../node_modules/jest/bin/jest.js --runInBand",
     "test:hooks": "jest src/__tests__/hooks --no-coverage",
     "test:theme": "node ../node_modules/jest/bin/jest.js --runInBand src/__tests__/theme src/__tests__/components/ThemeSwitcher.test.tsx",
-    "test:node": "node --experimental-strip-types --experimental-transform-types --test src/__tests__/*/*.node.test.ts",
+    "test:node": "node --experimental-strip-types --test src/__tests__/*/*.node.test.ts",
     "test:all": "npm test && npm run test:node"
   },
   "dependencies": {
